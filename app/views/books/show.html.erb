@@ -8,11 +8,11 @@
   <%= @book.author %>
 </p>
 
-<td><%= link_to 'Checkout', checkouts_path %></td>
+<div class="forms">
+	<%= render partial: 'form2' %>
+</div>
 
-<%#= form_for(@todo_list, @todo_list.todo_items.build do |f| %>
-<%#= f.hidden_field :book_id, book_id = @book.id %>
-<%# end %>
+<!-- <td><#%= link_to 'Checkout', checkouts_path(@checkout), method: :post %></td> -->
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

@@ -1,0 +1,16 @@
+<table>
+	<thead>
+    <tr>
+      <th>Book Title</th>
+      <th>User E-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+		<% @checkouts.each do |checkout| %>
+		<tr>
+			<td><%= checkout.book.try :title %></td>
+			<td><%= checkout.user.try :email %></td>
+		</tr>
+		<% end %>
+</tbody>
+</table>

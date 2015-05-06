@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :checkouts, only: :create
+  resources :checkouts, only: %i(index create)
 
   devise_for :users
   resources :books

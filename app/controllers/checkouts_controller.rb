@@ -7,6 +7,10 @@ class CheckoutsController < ApplicationController
   	redirect_to root_path
   end 
 
+  def index
+  	@checkouts = Checkout.all
+  end
+
   private
     # def set_checkout
     #   @checkout = Checkout.find(params[:id])

@@ -10,6 +10,9 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    @checkout = @book.checkouts.build
+    #.build makes the object and doesn't save it
+      #making template checkout
   end
 
   # GET /books/new
@@ -62,7 +65,7 @@ class BooksController < ApplicationController
   end
 
   def checkout
-    
+
   end
 
   private
