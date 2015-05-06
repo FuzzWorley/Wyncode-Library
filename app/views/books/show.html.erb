@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
@@ -9,6 +7,12 @@
   <strong>Author:</strong>
   <%= @book.author %>
 </p>
+
+<td><%= link_to 'Checkout', checkouts_path %></td>
+
+<%#= form_for(@todo_list, @todo_list.todo_items.build do |f| %>
+<%#= f.hidden_field :book_id, book_id = @book.id %>
+<%# end %>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
