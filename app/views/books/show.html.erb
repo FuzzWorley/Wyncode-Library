@@ -12,6 +12,11 @@
   <%= @book.author %>
 </p>
 
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+
 <div class="forms">
 	<%= render partial: 'form2' if current_user %>
 </div>
