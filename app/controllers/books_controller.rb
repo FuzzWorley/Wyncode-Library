@@ -10,6 +10,9 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    @checkout = @book.checkouts.build
+    #.build makes the object and doesn't save it
+      #making template checkout
   end
 
   # GET /books/new
@@ -59,6 +62,10 @@ class BooksController < ApplicationController
       format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def checkout
+
   end
 
   private
