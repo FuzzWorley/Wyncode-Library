@@ -10,7 +10,8 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
-    @checkout = @book.checkouts.build
+      # @checkout = @book.checkouts.build
+      @checkout = @book.checkouts.last || Checkout.new(book_id: @book.id)
     #.build makes the object and doesn't save it
       #making template checkout
   end

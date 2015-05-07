@@ -1,5 +1,13 @@
 <%= form_for @checkout do |f| %>
 	<%= f.hidden_field :book_id %>
-	<%= f.submit 'Check out' %>
+  <% if @book.checkedout? %>
+    <% if current_user != nil &&  current_user.admin_status == true%>
+      <%= link_to 'Return Book', checkout_path(@checkout), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% else %>
+      <p>Sorry, this book is already checked out</p>
+    <% end %>
+  <% else %>
+	 <%= f.submit 'Check out' %>
+  <% end %>
 <% end %>
 
