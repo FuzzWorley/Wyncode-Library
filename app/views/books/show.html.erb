@@ -1,4 +1,8 @@
 <p>
+  <%= image_tag @book.picture %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @book.title %>
 </p>
@@ -8,11 +12,15 @@
   <%= @book.author %>
 </p>
 
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+
 <div class="forms">
-	<%= render partial: 'form2' %>
+	<%= render partial: 'form2' if current_user %>
 </div>
 
 <!-- <td><#%= link_to 'Checkout', checkouts_path(@checkout), method: :post %></td> -->
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
