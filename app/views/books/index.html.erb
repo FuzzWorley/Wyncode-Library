@@ -1,6 +1,6 @@
 <div class="jumbotron no-bottom">
   <div class="container">
-    <h1>Listing All Books</h1>
+    <h1>Listing All Books <i class="fa fa-pencil"></i></h1>
     <% if current_user != nil &&  current_user.admin_status == true%>        
     <% @books.each do |book| %>
     <div class = "row">
@@ -10,12 +10,10 @@
       </div>
       <div class ="col-md-4">
         <h3>Title</h3>
-        <br />
         <h4><%= book.title %></h4>
       </div>
       <div class ="col-md-4">
         <h3>Author</h3>
-        <br />
         <h4><%= book.author %></h4>
       </div>
     </div>
@@ -42,12 +40,10 @@
       </div>
       <div class ="col-md-4">
         <h3>Title</h3>
-        <br />
         <h4><%= book.title %></h4>
       </div>
       <div class ="col-md-4">
         <h3>Author</h3>
-        <br />
         <h4><%= book.author %></h4>
       </div>
     </div>
