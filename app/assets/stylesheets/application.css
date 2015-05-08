@@ -16,8 +16,10 @@
  * {
   font-family: 'PT Sans', sans-serif;
  }
-html {
-  background: black;
+html, 
+body {
+  height: 100%;
+  background: #EEEEEE;
 }
 ul {
   list-style: none;
@@ -131,11 +133,6 @@ textarea#book_description {
   width: 50%;
   border-radius: 5px;
   border: 2px inset;
-}
-footer {
-  min-height: 50px;
-  background: black;
-  border: 1px solid transparent;
 }
 @media screen and (max-width: 1000px) {
   input[type="text"],
