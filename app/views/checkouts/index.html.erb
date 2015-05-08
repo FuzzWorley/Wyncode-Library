@@ -1,16 +1,41 @@
-<table>
-	<thead>
-    <tr>
-      <th>Book Title</th>
-      <th>User E-mail</th>
-    </tr>
-  </thead>
-  <tbody>
-		<% @checkouts.each do |checkout| %>
-		<tr>
-			<td><%= checkout.book.try :title %></td>
-			<td><%= checkout.user.try :email %></td>
-		</tr>
-		<% end %>
-</tbody>
-</table>
+
+
+<% if current_user != nil &&  current_user.admin_status == true%>
+<div class="jumbotron">
+  <div class="container">
+    <div class="row sizing-checkouts">
+      <div class="table-responsive">
+        <table class = "table table-hover">
+          <thead>
+            <tr>
+              <th>Book Title</th>
+              <th>User E-mail</th>
+            </tr>
+          </thead>
+          <tbody id = "checkouts-table">
+            <% @checkouts.each do |checkout| %>
+            <tr>
+              <td><%= checkout.book.try :title %></td>
+              <td><%= checkout.user.try :email %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+        <div class="checkout-back">
+          <%= link_to 'Back', books_path %>
+        </div>
+    </div>
+  </div>
+</div>      
+<% else %>
+<div class="jumbotron">
+  <div class="container">
+    <div class="row sizing-sorry">
+      <p class = "sorry-mate">
+        Sorry, you are not allowed to view this page! <i class="fa fa-meh-o"></i>
+      </p>
+    </div>
+  </div>
+</div>
+<% end %>

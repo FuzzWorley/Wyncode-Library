@@ -1,5 +1,12 @@
-<h1>New Book</h1>
+<div class="jumbotron no-bottom">
+  <div class="container">
+    <div class="row">
+      <h1>Enter a New Book</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', books_path %>
+      <%= render 'form' %>
+      <div class="bottom-links new-back col-md-1">
+        <%= link_to 'Back', books_path %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,3 +13,207 @@
  *= require_tree .
  *= require_self
  */
+ * {
+  font-family: 'PT Sans', sans-serif;
+ }
+html, 
+body {
+  height: 100%;
+  background: #EEEEEE;
+}
+ul {
+  list-style: none;
+  padding-left: 15px;
+}
+ul.new-user-create li {
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 2px;
+}
+.user-sign-up-btn{
+  margin-top: 15px;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background: gray;
+  margin-top: 20px;
+}
+.fa-book:before {
+  color: #00D2F8;
+  position: relative;
+  top: 15px;
+  left: -170px;
+  font-size: 2em;
+}
+.alerts {
+  color: white;
+  height: 100%;
+  margin: 15px;
+  text-align: right;
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 3px solid gray;
+}
+.h3, h3 {
+  font-weight: bold;
+}
+.col-md-2 {
+  text-align: left;
+}
+.link-placement{
+  margin-top: 10px;
+  text-align: center;
+}
+.checkout-back {
+  padding-left: 8px;
+}
+#checkouts-table tr:first-child {
+  display: none;
+}
+.container.create-user-forms {
+  margin-top: 27px;
+}
+.table-responsive {
+  margin-top: 50px;
+}
+.row.sizing-checkouts {
+  width: 80%;
+  margin: auto;
+}
+.sizing-sorry {
+  margin: 50px auto;
+  width: 50%;
+  padding: 8px;
+  text-align: center;
+}
+div.no-bottom {
+  margin-bottom: 0;
+}
+.show-books.container {
+  margin-top: 50px;
+  background: white;
+  border-radius: 15px;
+  width: 900px;
+  padding: 40px;
+}
+img {
+  height: 160px;
+  max-width: 160px;
+  border-radius: 5px;
+}
+button.buttons, 
+input[type="submit"] {
+  border-radius: 5px;
+  padding: 6px 20px;
+  color: white;
+  background: #00D2F8;
+  margin: 0 2px;
+  border: none;
+}
+button:hover, 
+input[type="submit"]:hover {
+  background: #97DCE8;
+}
+button.show-book-btn {
+  margin-top: 7px;
+}
+.back-edit-user {
+  text-align: right;
+  margin-left: 15px;
+}
+.edit-form {
+  margin-top: 30px;
+}
+.col-md-2.col-md-offset-3 {
+  margin-top: 20px;
+}
+.bottom-links {
+  margin-top: 10px;
+}
+.bottom-links.new-back.col-md-1 {
+  text-align: center;
+}
+.center-btn {
+  text-align: center;
+  margin-top: 25px;
+}
+button.buttons.add-new-btn {
+  width: 15%;
+  height: 40px;
+}
+.navbar-brand#our-logo {
+  color: white;
+}
+.navbar-brand#our-logo:hover {
+  color: #9d9d9d;
+}
+textarea#book_description {
+  height: 150px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea#book_description {
+  width: 50%;
+  border-radius: 5px;
+  border: 2px inset;
+}
+p.sorry-mate {
+  border: 2px solid gray;
+}
+@media screen and (max-width: 1000px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea#book_description {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 990px) {
+  p.swing-image {
+    text-align: left;
+  }
+  button.buttons.add-new-btn {
+    width: 23%
+  }
+  .row.sizing-checkouts {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .fa-book:before {
+      display: none;
+  }
+  button.buttons.add-new-btn {
+    width: 40%;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="text"],
+  textarea#book_description {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
