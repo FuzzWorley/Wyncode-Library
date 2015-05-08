@@ -30,6 +30,9 @@
       <%= link_to new_book_path do %>
       <button type="submit" class="buttons add-new-btn">Add New Book</button>
       <% end %>
+        <%= link_to checkouts_path do%>
+          <button type="submit" class="buttons add-new-btn">View Checkouts</button>
+        <% end %>
     </div>
     <% else %>
     <% @books.each do |book| %>
