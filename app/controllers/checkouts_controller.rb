@@ -18,7 +18,7 @@ class CheckoutsController < ApplicationController
   def destroy
     @checkout.destroy
     respond_to do |format|
-      format.html { redirect_to books_url, notice: 'Book was successfully returned.' }
+      format.html { redirect_to books_url, notice: 'Book was successfully returned!' }
       format.json { head :no_content }
     end
   end
